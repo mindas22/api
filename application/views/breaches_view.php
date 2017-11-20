@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * checking if result not null (in case parameter does not mach entries in database need to return 404)
+ * checking if result not null (in case parameter does not match entries in the database need to return 404)
  * show_404(); - Not found — the Name could not be found and has therefore not been breached.
  * encode to JSON and output
  */
