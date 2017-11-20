@@ -8,8 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class breaches extends CI_Controller {
   /**
-  * This method to search  breached site by name
-  * result set countains one record if search criteria is satisfied 
+  * This method to search  breached site by name 
+  * result set countains one record if search criteria is satisfied
+  * (view is removed from url using routes) 
   */
 	public function view($name)
 	{

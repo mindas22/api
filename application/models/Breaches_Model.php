@@ -9,18 +9,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 class Breaches_Model extends CI_Model {
-		/** This method gets all data from 'breached_sites' table. 
-		 * With no parameter, and no filter returns all table content as per table schema.
-		 */
+	/** This method gets all data from 'breached_sites' table. 
+	 * With no parameter, and no filter returns all table content as per table schema.
+	 */
 	public function getAllData() 
 	{
-		 return $this->db->get('breached_sites')->result(); 
+		return $this->db->get('breached_sites')->result(); 
 	}
 
 
 	/** This method returns top 10 sites by breached accounts result incudes site 
-	* name and breaches count number. There is no additional parameter for filtering.
-	*/
+	 * name and breaches count number. There is no additional parameter for filtering.
+	 */
 	public function getTopTenBreaches() 
 	{
 		$query = $this->db->query('SELECT Name, PwnCount from breached_sites order by PwnCount desc limit 10;');
