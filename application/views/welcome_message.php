@@ -70,7 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Breached sites API</h1>
 
 	<div id="body">
-		
+		<small><p>Note: If used with apache server and mod_rewrite module enabled, should work without index.php in URL.</p>
+		<p>Note2: /<strong>api</strong>/ in URL is needed ONLY if application added to api folder</p></small>
 			<h2>Getting all breached sites in the system</h2>
 		<p>
 
@@ -83,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<h2>Getting top 10 breached sites by account number in the breach</h2>
 		<p> To get top 10 breached sites use <code>GET localhost/api/index.php/top10/</code></p>
-		<p><small>Note: If used with apache server and mod_rewrite module enabled, should work without index.php in url.</small></p>
+	
 
 	</div>
 
