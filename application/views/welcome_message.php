@@ -40,7 +40,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		background-color: #f9f9f9;
 		border: 1px solid #D0D0D0;
 		color: #002166;
-		display: block;
 		margin: 14px 0 14px 0;
 		padding: 12px 10px 12px 10px;
 	}
@@ -68,18 +67,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Breached sites API</h1>
 
 	<div id="body">
-		<p>The the the  page you are looking at is being generated dynamically by CodeIgniter.</p>
+		
+			<h2>Getting all breached sites in the system</h2>
+		<p>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+	A "breach" is an instance of a system having been compromised by an attacker and the data disclosed. For example, Adobe was a breach, Gawker was a breach etc. It is possible to return the details of each of breach in the system which currently stands at 252 breaches.
+		</p>
+		<p> To get all breached sites use <code>GET localhost/api/index.php/breaches/</code></p>
+		<h2>Getting a single breached site</h2>
+		<p>Sometimes just a single breach is required and this can be retrieved by the breach "name". </p>
+		<p> To get single breached site use <code>GET localhost/api/index.php/breaches/{name}</code> (example localhost/api/index.php/breaches/126) </p>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+		<h2>Getting top 10 breached sites by account number in the breach</h2>
+		<p> To get top 10 breached sites use <code>GET localhost/api/index.php/top10/</code></p>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
