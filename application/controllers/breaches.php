@@ -3,10 +3,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * This controller class is used for getting data form model and sending to view
- * There are two methods
+ * There are two methods. index method returns default list of breached sites
+ * view method takes site name as filter parameter. 
  */
 class breaches extends CI_Controller {
-
+  /**
+  * This method to search  breached site by name
+  * result set countains one record if search criteria is satisfied 
+  */
 	public function view($name)
 	{
 		$this->load->model('Breaches_Model');
@@ -14,6 +18,10 @@ class breaches extends CI_Controller {
 		$this->load->view('breaches_view', $data);
 	}
 	
+	/**
+  * This method returns all full list of breached sites
+  * 
+  */
 	public function index()
 	{
 		$this->load->model('Breaches_Model');
